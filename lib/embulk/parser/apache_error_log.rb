@@ -2,22 +2,22 @@ module Embulk
   module Parser
 
     class ApacheErrorLog < ParserPlugin
-      Plugin.register_parser("apache_error_log", self)
+      Plugin.register_parser('apache_error_log', self)
 
       def self.transaction(config, &control)
         # configuration code:
         puts config
         task = {
-          'hostname' => config.param('hostname', :string)
+          'hostname' => config.param('hostname', :string, default: '')
         }
 
         columns = [
-          Column.new(0, "time", :string),
-          Column.new(1, "level", :string),
-          Column.new(2, "pid", :long),
-          Column.new(3, "client", :string),
-          Column.new(4, "message", :string),
-          Column.new(5, "hostname", :string)
+          Column.new(0, 'time', :string),
+          Column.new(1, 'level', :string),
+          Column.new(2, 'pid', :long),
+          Column.new(3, 'client', :string),
+          Column.new(4, 'message', :string),
+          Column.new(5, 'hostname', :string)
         ]
 
         yield(task, columns)

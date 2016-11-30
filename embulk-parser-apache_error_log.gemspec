@@ -1,7 +1,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "embulk-parser-apache_error_log"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Tomohiro Mitsusmune"]
   spec.summary       = "Apache Error Log parser plugin for Embulk"
   spec.description   = "Parses Apache Error Log files read by other file input plugins."
