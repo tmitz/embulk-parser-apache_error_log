@@ -1,0 +1,3 @@
+[Wed Nov 30 21:00:40 2016] [error] (70007)The timeout specified has expired: ajp_ilink_receive() can't receive header
+[Wed Nov 30 21:39:25 2016] [error] [client 127.0.0.1] client denied by server configuration: /var/www/public_html/
+[Wed Nov 30 21:39:25 2016] [error] [client 127.0.0.1] client denied by server configuration: /var/www/public_html/error/noindex.html

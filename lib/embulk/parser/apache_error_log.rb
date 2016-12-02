@@ -1,4 +1,4 @@
-module Embulk
+  module Embulk
   module Parser
 
     class ApacheErrorLog < ParserPlugin
@@ -6,7 +6,6 @@ module Embulk
 
       def self.transaction(config, &control)
         # configuration code:
-        puts config
         task = {
           'hostname' => config.param('hostname', :string, default: '')
         }
